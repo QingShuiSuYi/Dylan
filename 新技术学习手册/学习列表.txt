@@ -1,0 +1,7 @@
+
+数据库：MangoDB、Redis
+后端rest框架：Jersey
+前端框架：react（ant Design）
+服务注册和管理：dubbo、zookeeper
+消息队列：RabbitMQ、kafka
+微服务框架：SpringBoot

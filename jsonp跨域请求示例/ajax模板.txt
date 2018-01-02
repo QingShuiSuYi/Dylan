@@ -1,0 +1,57 @@
+jQuery.ajax({
+	url:"/jsp/provide/project/budgetVerificationcontract.jsp",
+	type:"POST",
+	async:false,
+	data:{
+		khht:khht
+	},
+	success: function(msg){
+	
+	} 
+});
+
+//$.post  写法
+$.post("demo_ajax_gethint.php",{suggest:txt},function(result){},"text");
+
+$.post(URL,data,function(data,status,xhr),dataType)
+
+function(data,status,xhr)额外的参数：
+	data - 包含来自请求的结果数据
+	status - 包含请求的状态（"success"、"notmodified"、"error"、"timeout"、"parsererror"）
+	xhr - 包含 XMLHttpRequest 对象
+dataType:
+可选。规定预期的服务器响应的数据类型。
+默认地，jQuery 会智能判断。
+可能的类型：
+	"xml" - 一个 XML 文档
+	"html" - HTML 作为纯文本
+	"text" - 纯文本字符串
+	"script" - 以 JavaScript 运行响应，并以纯文本返回
+	"json" - 以 JSON 运行响应，并以 JavaScript 对象返回
+	"jsonp" - 使用 JSONP 加载一个 JSON 块，将添加一个 "?callback=?" 到 URL 来规定回调
+
+
+
+$.ajaxSettings.async = false;
+$.post();
+$.ajaxSettings.async = true;
+
+
+
+//jsonp调用
+	$.ajax({
+		type: "post",
+		url: "",
+		dataType: "jsonp",
+		jsonp: 'callback',
+		jsonpCallback: 'aaaa',
+		data: { msg: 'msg19990' },
+		success: function (data) {
+			//jsonp请求，不会执行此函数，只执行CallBackUser
+			alert("jsonp不走success，走的是客户端和服务端约定好的回调函数");
+		}
+	});
+
+function aaa(data) {
+	alert(data);
+}
